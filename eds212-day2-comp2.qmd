@@ -2,4 +2,28 @@
 title: "eds212-day2-comp2"
 ---
 
-## 
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+
+## Plotting functions in ggplot2
+```{r}
+fx <- function(x) {3 * x ^ 2 + 4}
+
+ggplot(data.frame(x = c(1, 100)), aes(x = x)) + geom_function(fun = fx)
+#c is combine, basically creating vector with multiple elements in it
+```
+## Partial Derivative
+```{r}
+fxyz = expression(2 * x * y +3 * (x ^ 2) * (z ^ 3))
+#remember 'expressions' stand for derivative
+dfdy = D (fxyz, 'y')
+dfdy
+#finding the derivative of y
+
+```
+
+
+
