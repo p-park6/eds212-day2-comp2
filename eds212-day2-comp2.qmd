@@ -25,5 +25,26 @@ dfdy
 
 ```
 
+## Penguins plot
+```{r}
+view(penguins)
+penguin_graph <- ggplot(data = penguins, 
+                        aes(x = flipper_length_mm, 
+                            y=body_mass_g, 
+                            color = species)) + 
+  geom_point() + 
+  labs(x = "Flipper length (mm)", 
+       y = "Body mass (g)", 
+       title = "pengiun graph") + 
+  theme_dark()
+penguin_graph
+# in graph, it shows us that some information is missing, this in important for other projects
+```
+
+
+
+
+
+
 
 
